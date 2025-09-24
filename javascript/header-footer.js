@@ -5,7 +5,7 @@ class Header extends HTMLElement {
         <div class="container">
             <div class="nav_inner">
                 <div class="logo">
-                    <a href="/"><img src="assets/images/logo.png" alt="Logo"/></a>
+                    <a href="/ImPoncha.github.io"><img src="assets/images/logo.png" alt="Logo"/></a>
                 </div>
                 <div class="hamburger">
                   <img src="assets/images/hamburger.png" alt="hamburger"/>
