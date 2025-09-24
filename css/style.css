@@ -1,0 +1,472 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary_family:segoe_bold;
+    --secondary_family:segoe_light;
+    --primary-color:#1a57b3;
+}
+/** GLOBAL CSS **/
+@font-face {
+    font-family: segoe_light;
+    src: url(../assets/fonts/segoe_light.ttf);
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: segoe_bold;
+    src: url(../assets/fonts/segoe_bold.ttf);
+    font-weight: 700; 
+    font-style: normal;
+    font-display: swap;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#main{
+    flex-grow: 1;
+}
+.container{
+    width:min(1380px, calc(100% - 25px));
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+p{
+    font-size: 18px;
+    font-family: var(--secondary_family);
+    line-height: 27px;
+    color:#565656;
+    margin-bottom: 25px;
+}
+h2 {
+    font-family: var(--primary_family);
+    font-size: 30px;
+    line-height: 40px;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+h3{
+    font-family: var(--secondary_family);
+    font-size: 25px;
+    line-height: 31px;
+    color: #000;
+    margin-block: 10px 20px;
+}
+.row{
+    display: flex;
+}
+.site_btn {
+    background: var(--primary-color);
+    font-family: var(--primary_family);
+    font-size: 17px;
+    padding: 13px 20px;
+    display: inline-block;
+    color: #fff;
+    margin-top: 6px;
+    letter-spacing: 0.5px;
+    transition: all 500ms ease;
+}
+.site_btn:hover{
+    background: #123d7f;
+}
+.highlights p{
+    margin: 0;
+}
+.highlights {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.highlights a{
+    color:var(--primary-color);
+    text-decoration: underline;
+}
+/** GLOBAL CSS **/
+/** HEADER **/
+main-header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 0 20px #222222a1;
+}
+#site_header{
+    background: var(--primary-color);
+    z-index: 999;
+}
+#site_header .nav_inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+#site_header .nav_inner .logo a{
+    width: 120px;
+    display: block;
+}
+#site_header .navigation ul{
+    display:flex;
+    align-items: center;
+    gap:28px;
+}
+#site_header .navigation ul a{
+    font-family: var(--secondary_family);
+    font-size: 16.2px;
+    line-height: 18px;
+    color:#fff;
+    display: block;
+    transition: all 500ms ease;
+}
+#site_header .navigation ul a:hover{
+    opacity: 0.6;
+}
+#site_header .navigation ul svg{
+    fill:#fff;
+    width: 15px;
+    height: 15px;
+    margin-top: 4px;
+}
+/** HEADER **/
+/** HERO SECTION **/
+#hero_section{
+    padding-block: 50px;
+}
+#hero_section  .row{
+    gap:60px;
+}
+#hero_section .content_part{
+    width: 65%;
+}
+#hero_section .sidebar{
+    width: 35%;
+}
+p a{
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+#hero_section .cline_name{
+    font-family: var(--primary_family);
+    color:#fff;
+    background: var(--primary-color);
+    padding: 10px 5px;
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+    z-index: 5;
+}
+#hero_section .client_image {
+    overflow: hidden;
+    margin-bottom: 35px;
+}
+#hero_section .client_image img{
+    transition: all 500ms ease;
+}
+#hero_section .client_image:hover img{
+    scale:1.1;
+}
+#hero_section .content_part ul {
+    margin-bottom: 25px;
+}
+ .content_part ul li {
+    font-family: var(--secondary_family);
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #000;
+    display: flex;
+    align-items: flex-start;
+}
+.content_part ul li a{
+    text-decoration: underline;
+    color: #000;
+    word-break: break-all;
+}
+.content_part ul li:before {
+    content: "";
+    background: url(../assets/images/arrow-right.png);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+/** HERO SECTION **/
+/** FOOTER CSS **/
+#site_footer{
+    background: var(--primary-color);
+    text-align: center;
+    padding: 10px 10px;
+    font-family: var(--secondary_family);
+    font-size: 15px;
+    color: #fff;
+}
+/** FOOTER CSS **/
+/** UPDATED PAGE CSS **/
+#updates{
+    padding-block: 50px;
+}
+#updates .highlights{
+    margin: 0;
+    padding-block: 20px;
+}
+/** UPDATED PAGE CSS **/
+/** PUBLICATIONS PAGE CSS **/
+#publications{
+    padding-block:50px;
+}
+#publications ol{
+    font-size: 18px;
+    font-family: var(--primary_family);
+    padding-left: 28px;
+}
+#publications ol p{
+    color:#000;
+}
+.pub_box{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+/** PUBLICATIONS PAGE CSS **/
+/** CV PAGE CSS **/
+#cv{
+    padding-block: 50px;
+}
+#cv .education_box {
+    text-align: center;
+    width: calc(33.33% - 20px);
+    flex-grow: 1;
+    background: #fff;
+    padding: 25px;
+    box-shadow: 0 0 10px #22222252;
+    transition: all 500ms ease;
+    border: 1px solid var(--primary-color);
+}
+#cv .education_box .ubi_img{
+    width: 120px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 29px;
+}
+#cv .education_box .ubi_img img{
+    object-fit: cover;
+}
+#cv .education_box:hover{
+    box-shadow: 0 0 1px 1px #22222275;
+}
+.last_updated {
+    font-family: var(--secondary_family);
+    font-size: 17px;
+    color: #303030;
+}
+#cv .education_box h4{
+    font-family: var(--primary_family);
+    font-size: 25px;
+    line-height: 28px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+/* #cv .education_box h4:before{
+    content: "";
+    background: url(../assets/images/arrow-right-white.png);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    margin-top: 5px;
+    flex-shrink: 0;
+} */
+#cv .row{
+    gap:20px;
+    flex-wrap: wrap;
+}
+#cv .education,
+#cv .review,
+#cv .technical_skills,
+#cv .word_exp,
+#cv .publ{
+   border-bottom: 1px solid #ccc;
+   margin-bottom: 20px;
+   padding-bottom: 30px;
+}
+#cv .education_box .university{
+    font-family: var(--secondary_family);
+    font-size: 20px;
+    line-height: 25px;
+    color: #000;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+#cv .word_exp .sub_head{
+    font-size: 20px;
+    font-family: 'segoe_light';
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+#cv :is(.word_exp, .technical_skills) ul li {
+    display: block;
+    position: relative;
+    padding-left: 33px;
+}
+#cv :is(.word_exp, .technical_skills) ul li::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#cv .education_box p{
+    color: #000;
+    margin: 0;
+    padding-left: 30px;
+}
+#cv .education_box ol{
+    padding-left: 30px;
+     font-size: 20px;
+    line-height: 25px;
+    color: #fff;
+}
+#cv .education_box ol .university{
+    padding: 0;
+}
+#cv .projects{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+}
+#cv .projects ul{
+    margin-bottom: 25px;
+}
+#cv .projects ul p{
+    margin-bottom: 10px;
+    padding-left: 30px;
+    color: #000;
+}
+/** CV PAGE CSS **/
+/** MOBILE MENU CSS **/
+.hamburger{
+    display: none;
+}
+/** MOBILE MENU CSS **/
+/** RESPONSIVE CSS **/
+@media(min-width:767.98px){
+    #hero_section .content_part .client_image{
+        display: none;
+    }
+}
+@media(max-width:991.98px){
+    #hero_section .row{
+        gap:15px;
+    }
+    #cv .education_box{
+        width: calc(50% - 20px);
+    }
+}
+@media(max-width:767.98px){
+    .row{
+        flex-direction: column;
+    }
+    #hero_section :is(.content_part, .sidebar){
+        width: 100%;
+    }
+    #hero_section .sidebar .client_image{
+        display: none;
+    }
+    #site_header .navigation {
+        position: absolute;
+        top: 100%;
+        width: 100vw;
+        margin: 0 calc(50% - 50vw);
+         display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        transition: all 500ms ease;
+    }
+    #site_header .navigation.active{
+        grid-template-rows: 1fr;
+    }
+    #site_header .navigation > div{
+        overflow: hidden;
+    }
+    #cv .education_box{
+        width: 100%;
+        padding: 15px;
+    }
+    #site_header .navigation ul{
+        flex-direction: column;
+        align-items: flex-start;
+        background: var(--primary-color);
+        padding: 20px;
+    }
+    .hamburger{
+        display: block;
+    }
+    .content_part ul li{
+        font-size: 16px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 25px;
+    }
+    h2{
+        font-size: 27px;
+        line-height: 37px;
+    }
+    .content_part ul li:before{
+        width: 17px;
+        height: 17px;
+        margin-top: 3px;
+    }
+    #site_header .navigation ul a{
+        font-size: 22.2px;
+        line-height: 23px;
+    }
+    #site_header .navigation ul svg{
+        width: 22px;
+        height: 22px;
+    }
+    #cv .education_box h4{
+        font-size: 21px;
+        line-height: 27px;
+    }
+    #cv .education_box .university{
+        font-size: 18px;
+        line-height: 23px;
+    }
+    #hero_section,
+    #updates,
+    #publications,
+    #cv{
+        padding-block: 20px;
+    }
+    #cv .word_exp .sub_head{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+/** RESPONSIVE CSS **/
