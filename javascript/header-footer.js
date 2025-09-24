@@ -13,7 +13,7 @@ class Header extends HTMLElement {
                 <div class="navigation">
                 <div>
                     <ul>
-                        <li><a href="/ponchaWeb">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="/ponchaWeb/updates">Updates</a></li>
                         <li><a href="/ponchaWeb/publications.html">Publications</a></li>
                         <li><a href="/ponchaWeb/cv.html">CV</a></li>
