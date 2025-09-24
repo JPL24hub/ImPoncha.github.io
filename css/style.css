@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 :root{
     --primary_family:segoe_bold;
@@ -25,11 +26,18 @@
 }
 body{
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 #main{
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
 }
 .container{
     width:min(1380px, calc(100% - 25px));
@@ -72,6 +80,8 @@ h3{
     margin-block: 10px 20px;
 }
 .row{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .site_btn {
@@ -83,6 +93,8 @@ h3{
     color: #fff;
     margin-top: 6px;
     letter-spacing: 0.5px;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 .site_btn:hover{
@@ -106,16 +118,23 @@ main-header {
     position: sticky;
     top: 0;
     z-index: 9999;
-    box-shadow: 0 0 20px #222222a1;
+    -webkit-box-shadow: 0 0 20px #222222a1;
+            box-shadow: 0 0 20px #222222a1;
 }
 #site_header{
     background: var(--primary-color);
     z-index: 999;
 }
 #site_header .nav_inner{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     position: relative;
 }
 #site_header .nav_inner .logo a{
@@ -123,8 +142,12 @@ main-header {
     display: block;
 }
 #site_header .navigation ul{
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap:28px;
 }
 #site_header .navigation ul a{
@@ -133,6 +156,8 @@ main-header {
     line-height: 18px;
     color:#fff;
     display: block;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 #site_header .navigation ul a:hover{
@@ -177,6 +202,8 @@ p a{
     margin-bottom: 35px;
 }
 #hero_section .client_image img{
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 #hero_section .client_image:hover img{
@@ -190,8 +217,12 @@ p a{
     font-size: 20px;
     margin-bottom: 10px;
     color: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 .content_part ul li a{
     text-decoration: underline;
@@ -207,7 +238,8 @@ p a{
     background-repeat: no-repeat;
     margin-right: 10px;
     margin-top: 5px;
-    flex-shrink: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
 }
 /** HERO SECTION **/
 /** FOOTER CSS **/
@@ -244,6 +276,27 @@ p a{
 .pub_box{
     border-bottom: 1px solid #ccc;
     margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.pub_box .top_head{
+    color: #000;
+}
+.pub_box .pro_name{
+    margin: 0;
+}
+.pub_box span{
+    color: var(--primary-color);
+}
+.pub_box .btns_group{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 7px;
 }
 /** PUBLICATIONS PAGE CSS **/
 /** CV PAGE CSS **/
@@ -254,19 +307,27 @@ p a{
     text-align: center;
     width: calc(33.33% - 20px);
     position: relative;
-    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
   
 }
 
 #cv .education_box .front_side{
      background: #fff;
     padding: 25px;
-    box-shadow: 0 0 10px #22222252;
+    -webkit-box-shadow: 0 0 10px #22222252;
+            box-shadow: 0 0 10px #22222252;
     border: 1px solid var(--primary-color);
+    -webkit-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
     transition: all 500ms linear;
-    transform-style: preserve-3d;
-    transform: translateY(0);
-    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
      width: 100%;
     height: 100%;
 }
@@ -278,12 +339,18 @@ p a{
     height: 100%;
     background: #fff;
     padding: 25px;
-    box-shadow: 0 0 10px #22222252;
+    -webkit-box-shadow: 0 0 10px #22222252;
+            box-shadow: 0 0 10px #22222252;
     border: 1px solid var(--primary-color);
+    -webkit-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
     transition: all 500ms linear;
-    transform-style: preserve-3d;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
 }
 #cv .back_side .back_content{
     font-family: var(--secondary_family);
@@ -295,11 +362,13 @@ p a{
 }
 #cv .education_box:hover .front_side,
 #cv .education_box:active .front_side{
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
 }
 #cv .education_box:hover .back_side,
 #cv .education_box:active .back_side{
-    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
 }
 #cv .education_box .ubi_img{
     width: 120px;
@@ -309,7 +378,8 @@ p a{
     margin: 0 auto 29px;
 }
 #cv .education_box .ubi_img img{
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .last_updated {
@@ -323,15 +393,24 @@ p a{
     line-height: 28px;
     color: var(--primary-color);
     margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 #cv .row{
     gap:20px;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 #cv .education,
 #cv .review,
@@ -354,9 +433,15 @@ p a{
     font-size: 20px;
     font-family: 'segoe_light';
     color: var(--primary-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 15px;
     margin-top: 30px;
 }
@@ -420,7 +505,10 @@ p a{
 }
 @media(max-width:767.98px){
     .row{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     #hero_section :is(.content_part, .sidebar){
         width: 100%;
@@ -433,12 +521,17 @@ p a{
         top: 100%;
         width: 100vw;
         margin: 0 calc(50% - 50vw);
+         display: -ms-grid;
          display: grid;
+        -ms-grid-rows: 0fr;
         grid-template-rows: 0fr;
         overflow: hidden;
+        -webkit-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
         transition: all 500ms ease;
     }
     #site_header .navigation.active{
+        -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
     }
     #site_header .navigation > div{
@@ -451,8 +544,13 @@ p a{
         padding: 15px;
     }
     #site_header .navigation ul{
-        flex-direction: column;
-        align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
         background: var(--primary-color);
         padding: 20px;
     }
@@ -498,8 +596,13 @@ p a{
         padding-block: 20px;
     }
     #cv .word_exp .sub_head{
-        align-items: flex-start;
-        flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 }
 /** RESPONSIVE CSS **/
