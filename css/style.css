@@ -253,12 +253,53 @@ p a{
 #cv .education_box {
     text-align: center;
     width: calc(33.33% - 20px);
-    flex-grow: 1;
+    position: relative;
+    transform-style: preserve-3d;
+  
+}
+
+#cv .education_box .front_side{
+     background: #fff;
+    padding: 25px;
+    box-shadow: 0 0 10px #22222252;
+    border: 1px solid var(--primary-color);
+    transition: all 500ms linear;
+    transform-style: preserve-3d;
+    transform: translateY(0);
+    backface-visibility: hidden;
+     width: 100%;
+    height: 100%;
+}
+#cv .back_side {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     background: #fff;
     padding: 25px;
     box-shadow: 0 0 10px #22222252;
-    transition: all 500ms ease;
     border: 1px solid var(--primary-color);
+    transition: all 500ms linear;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+#cv .back_side .back_content{
+    font-family: var(--secondary_family);
+    font-size: 20px;
+    line-height: 25px;
+    color: #000;
+    margin-bottom: 25px;
+    text-align: left;
+}
+#cv .education_box:hover .front_side,
+#cv .education_box:active .front_side{
+    transform: rotateY(180deg);
+}
+#cv .education_box:hover .back_side,
+#cv .education_box:active .back_side{
+    transform: rotateY(0deg);
 }
 #cv .education_box .ubi_img{
     width: 120px;
@@ -270,9 +311,7 @@ p a{
 #cv .education_box .ubi_img img{
     object-fit: cover;
 }
-#cv .education_box:hover{
-    box-shadow: 0 0 1px 1px #22222275;
-}
+
 .last_updated {
     font-family: var(--secondary_family);
     font-size: 17px;
@@ -288,20 +327,11 @@ p a{
     align-items: flex-start;
     justify-content: center;
 }
-/* #cv .education_box h4:before{
-    content: "";
-    background: url(../assets/images/arrow-right-white.png);
-    width: 20px;
-    height: 20px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-right: 10px;
-    margin-top: 5px;
-    flex-shrink: 0;
-} */
+
 #cv .row{
     gap:20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 #cv .education,
 #cv .review,
@@ -367,6 +397,7 @@ p a{
     padding-left: 30px;
     color: #000;
 }
+
 /** CV PAGE CSS **/
 /** MOBILE MENU CSS **/
 .hamburger{
@@ -415,6 +446,8 @@ p a{
     }
     #cv .education_box{
         width: 100%;
+    }
+    #cv .education_box :is(.front_side, .back_side){
         padding: 15px;
     }
     #site_header .navigation ul{
